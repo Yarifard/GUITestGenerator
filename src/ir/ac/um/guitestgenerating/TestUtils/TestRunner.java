@@ -218,6 +218,8 @@ public class TestRunner {
             Process process =
                        runtime.exec(command, null, new File(path));
 
+
+
             StreamGobbler  streamGobbler =
                                           new StreamGobbler(process.getInputStream(), System.out::println);
             Future<?>  future = Executors.newSingleThreadExecutor().submit(streamGobbler);
